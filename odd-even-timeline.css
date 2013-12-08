@@ -1,0 +1,6 @@
+.timeline__item--odd {
+	float: left;
+}
+.timeline__item--even {
+	float: right;
+}
