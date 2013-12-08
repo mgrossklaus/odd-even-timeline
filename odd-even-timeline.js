@@ -9,10 +9,7 @@
 
 			function init($list) {
 
-				var $items	= $list.find('.timeline__item--not-arranged');
-
-				$($items[0]).add($($items[1])).removeClass('timeline__item--not-arranged');
-				$items.splice(0, 2);
+				var $items	= $list.find('.timeline__item:not(.timeline__item--odd,.timeline__item--even)');
 
 				$.each($items, function() {
 					arrangeSingleItem($list, $(this));
@@ -22,10 +19,8 @@
 
 			function arrangeSingleItem($list, $item) {
 
-				var $lefts								= $list.find('.timeline__item--odd'),
-						$rights								= $list.find('.timeline__item--even'),
-						$lastLeft							= $($lefts[$lefts.length-1]),
-						$lastRight						= $($rights[$rights.length-1]),
+				var $lastLeft							= $list.find('.timeline__item--odd').last(),
+						$lastRight						= $list.find('.timeline__item--even').last(),
 						lastLeftOuterHeight		= $lastLeft.outerHeight(),
 						lastLeftTopPosition		= $lastLeft.offset().top,
 						lastLeftEndPosition		= lastLeftOuterHeight + lastLeftTopPosition,
@@ -39,8 +34,6 @@
 				else {
 					$item.addClass('timeline__item--odd');
 				}
-
-				$item.removeClass('timeline-item--not-arranged');
 			}
 
 		});
