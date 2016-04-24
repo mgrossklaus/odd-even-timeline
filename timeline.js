@@ -20,7 +20,7 @@ var Timeline = function(list, options) {
         even: 'timeline__item--even',
       }, options);
 
-  listItems = list.querySelectorAll('.' + classes.item);
+  listItems = list.getElementsByClassName(classes.item);
 
   // return if we can't find any items to arrange.
   if (listItems.length === 0) {
@@ -53,8 +53,8 @@ var Timeline = function(list, options) {
    * odd and the last even item.
    */
   function arrangeItem(item) {
-    var oddAll  = list.querySelectorAll('.' + classes.odd),
-        evenAll = list.querySelectorAll('.' + classes.even);
+    var oddAll  = list.getElementsByClassName(classes.odd),
+        evenAll = list.getElementsByClassName(classes.even);
 
     item.classList.add(
       oddAll[oddAll.length - 1].getBoundingClientRect().bottom > evenAll[evenAll.length - 1].getBoundingClientRect().bottom ?
