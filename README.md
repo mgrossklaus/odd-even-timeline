@@ -1,7 +1,7 @@
 Timeline.js
 =================
 
-**Timeline** is a JavaScript plugin, that arranges items in a given list similar to the old facebook stream. You can see an example at [https://mgrossklaus.github.io/timeline/](https://mgrossklaus.github.io/timeline/).
+**Timeline** is a JavaScript plugin, that arranges items in a given list similar to the old facebook stream. You can see an example at [https://mgrsskls.github.io/timeline/](https://mgrsskls.github.io/timeline/).
 
 
 Usage
